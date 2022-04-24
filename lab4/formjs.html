@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <title>this </title>
+</head>
+<script>
+   function validateForm(){
+    
+        //model selection
+        var model = document.querySelector('input[name="buy"]:checked'); 
+		if(model==null){
+			alert("select the car model");
+			return false;}
+            //color selectiom
+   var colour= document.forms["myForm"]["cars"].value;
+  var others = document.forms["myform"]["opt"].value;
+		if(colour=="cars"&&others==""){
+			alert(" select the color");
+			return false;
+    			}
+                
+var textarea = document.forms["myform"]["large"].value;
+		if(textarea==""){
+			alert("enter the specifications");
+			return false;}
+            if(textarea.length<10 || textarea.length>15){
+			alert("specifications lesser than 15 and greater than 10");
+			return false;}
+
+    
+//name matching
+var letter= /^[A-Za-z]+$/;
+		var name = document.forms["myform"]["name"].value;
+		if(!name.match(letter))
+			{
+				alert(" enter valid name");
+				return false;
+            }
+            //number validate
+            var number = document.forms["myform"]["tele"].value;
+		if(number==""){
+			alert(" enter number ");
+			return false;
+        }
+		if(isNaN(number)){
+			alert(" enter number correctly ");
+			return false;
+        }
+
+var mail = document.forms["myform"]["mail"].value;
+		if(mail==""){
+			alert(" enter the mail id ");
+			return false;}
+		var regex = /^[a-zA-Z]+@[a-zA-Z]+(?:\.[a-zA-Z]+)*$/;
+		if(!mail.match(regex))
+			{
+				alert("Invalid mail id !Enter the mail id correctly");
+				return false;
+            }
+            var box = document.querySelector( 'input[name="tick"]:checked'); 
+		if(box==null){
+			alert("click tick");
+			return false;
+ }       }
+		
+
+</script>
+<body>
+    <form name="myForm"  onsubmit=" validateForm()" >
+
+        <p id ="a"><b>What of car would u like to buy?</b><br></p>
+           <input type="radio" name="buy" value="proton" > proton
+           <input type="radio" name="buy" value="honda" >honda
+           <input type="radio" name="buy" value="ferri" >ferri
+         <input type="radio" name="buy" value="ford" >ford
+        
+    </p>
+    <p id ="b"><b>What color do u want on your car?</b><br></p>
+      <select name="cars">
+            <option value="pink">pink</option> 
+            <option value="red">red</option>
+            <option value="grey">grey</option>
+            <option value="white">white</option>
+            <option value="blue">blue</option>
+         
+        </select>
+        option:<input type="text" id="opt" name="opt">
+
+          <p><b>enter other specification for ur preferred car:</b></p><br>
+               <textarea  name ="large" rows="4" cols="50" ></textarea><br>
+               <p><b>Tell us how to get in touch with u</b></p>
+               <p style="margin: 25px;text-align :right;width:300px;">
+                             Name:<input type="text" id="fname" name="name"><br><br>
+                            Telephone:<input type="text" id="fname" name="tele"><br><br>
+                             Email:<input type="text" id="fname" name="mail"><br><br></p>
+
+<input type="checkbox" name="tick" >please contact me as soon as possible
+
+<p><b>My Mail: <a href="">abc@gmail.com</a></b></p>
+				<input type="submit"style="margin: 30px" value="submit"></input>
+				<input type="button" name="press" value="clear"></button><br>
+				<a href ="">Back to mail page</a>
+</form>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>qn1</title>
+    </head>
+    <script>
+        function validate(){
+            var x = document.getElementById(" age");
+		    if(x>1&&x<100){
+			alert(" enter  age from  1-100");
+			return false;
+    			}
+                else{
+                    true;
+                }
+
+                var x=document.myform.mail.value;  
+                var atposition=x.indexOf("@");  
+               var dotposition=x.lastIndexOf(".");  
+              if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+              alert("Please enter a valid e-mail address");  
+                return false;  
+                    } 
+  var g = document.forms["myform"]["gender"].value;
+		if(g=="f"||g=="m"){
+            return true;
+        }else{
+
+        
+			alert("please enter the valid gender ");
+			return false;}
+  
+		  
+
+
+  
+        }
+    </script>
+    <body>
+        <h4>Develop a web page that allows the user to enter all the details of the passenger (name, age, email id , gender).
+            Write a client side scripting code to validate the email id ,age and gender, where email id should consists of the special 
+            symbol @and period(.),where age between 1 to 100 and gender is male or female
+            Create a page with JavaScript to do the following. These can all be on one page.</h4>
+           
+            <form name="myform" >
+            <pre> <p style="align-items: center;">
+              
+            name:<input type="=text"  name="name" required><br>
+            <br>
+             age:<input  id="age "type="text" name="age"><br>
+          <br>
+       email id :<input type="text" name="mail"><br>
+          <br>
+          gender:<input id  type="text" name="gender"><br>
+
+                         <button onclick="validate()" value="submit">submit</button>
+          </p>
+          </pre>
+            </form>
+         
+    </body>
+</html>

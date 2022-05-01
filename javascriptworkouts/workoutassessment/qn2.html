@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>qn2</title>
+    </head>
+    <script>
+     function validate(){
+
+        
+            let person = prompt("Please enter your name", "vais");
+            if (person != null) {
+          document.write(  document.getElementById("demo").innerHTML = "Hi "+person+"!");
+          document.write("        <br/>        ");
+   
+            }
+  
+  document.write(alert("welcome"));
+  document.write("        <br/>        ");
+  let dateObj = new Date();
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const d = new Date();
+let name = month[d.getMonth()];
+           
+            let dd = String(dateObj.getDate());
+            let yyyy= dateObj.getFullYear();
+            document.write("   <h3>     current month -date-year</h3>       ");
+            let output =name + '  ' + dd+ ' ' + yyyy;
+           
+            document.write(output);
+            document.write("        <br/>        ");
+            document.write("<b><h4>last modified time is:</b><h4>")
+            document.write("        <br/>        ");
+            
+   
+            document.write(document.lastModified);
+
+
+
+           
+        }
+    </script>
+    <body>
+        <h4>Create a page with JavaScript to do the following. These can all be on one page.
+            (a) Prompt the user for their name.
+            
+            (b) Use a pop-up box to welcome the user by name.
+            
+            (c) Display the current date on the page in the following format: April 30, 2014.
+            
+            Do not display the time. Do not "hard code" the date; if I load the page tomorrow,
+            
+            I should get a different date than if I load it today.
+            
+            (d) Display the last modified date of the document.
+            
+            (e) Put some useful advice, on any subject, in the status line of the browser</h4>
+           
+            <form name="myform" onsubmit="validate()">
+                <p id="demo"></p>
+
+            
+
+                         <button onclick="validate()">submit</button>
+          
+         
+            </form>
+         
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>qn4 </title>
+	</head>
+	
+	<script>
+		function validate(){
+			let text = document.getElementById("a").value;
+			let char = document.getElementById("b").value;
+			let count = 0;
+			for(let i=0;i<text.length;i++){
+				if(text.charAt(i)==char){
+					count = count + 1;
+				}
+			} 
+			alert("The number of character in the text is "+count);
+		}
+			
+	</script>
+  <body>
+    <h4>Create a form that gets input of several lines of text and a search character. On clicking the search button in the client form invoke suitable script function to display the number of occurrences of the character in the text using suitable string methods.</h4>
+		<form onsubmit="validate();">
+			<h2>Enter the Text</h2><br>
+			<textarea rows="10" cols="10" id="a"></textArea><br>
+			Enter the search character : <input type="text" id="b"></input><br>
+			<input type="submit" value="check" ></input>
+		</form>  
+	</body>
+</html>

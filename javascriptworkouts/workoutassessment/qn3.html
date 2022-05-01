@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript program </title>
+	</head>
+
+	<script>
+		function validate(){
+		
+			let pincode = document.getElementById("pin").value;
+			
+			if(pincode.length!=6){
+				alert("Pincode should contain exactly 6 numerics");
+				return false;}
+			let state = document.getElementById("state").value;
+			
+			if(state.length!=2){
+				alert("State should contain exactly 2 characters");
+				return false;}
+                var x=document.myform.gmail.value;  
+                var atposition=x.indexOf("@");  
+               var dotposition=x.lastIndexOf(".");  
+              if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+              alert("Please enter a valid e-mail address");  
+                return false;  
+                    } 
+                }
+	</script>
+    	<body>
+            <form name="myform" onsubmit = "validate()" >
+                <h2> User Registration Form </h2>
+                FirstName : <input type="text" id="first" required></input><br><br>
+                LastName : <input type="text" id="second"required></input><br><br>
+                Email : <input type="text" id="gmail"required></input><br><br>
+                Address : <input type="text" id="Address"required></input><br><br>
+                City : <input type="text" id="city"required></input><br><br>
+                State : <input type="text" id="state"required></input><br><br>
+                Country : <input type="text" id="country"required></input><br><br>
+                Pincode : <input type="text" id="pin"required></input><br><br>
+                UserName : <input type="text" id="user"required></input><br><br>
+                Password : <input type="text" id="pwd"required></input><br><br>
+                <input type="submit" value="Submit"></input>
+            </form> 
+        </body>
+</html>
